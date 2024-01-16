@@ -54,9 +54,9 @@ EOF;
                 'user_email' => $row['email'],
                 'registered_method' => $row['registered_method'],
                 'provider_type' => $row['provider_type'],
-                'user_detail' => $this->getUserDetail($userID) ?? [],  // need slice from ministore_member table
-                'user_shipping_info' => $this->getUserShippingInfo($userID) ?? [],
-                'user_site_level' => $this->getUserSiteLevel($userID) ?? [],
+                'user_detail' => $this->getUserDetail($member_id) ?? [],
+                'user_shipping_info' => $this->getUserShippingInfo($member_id) ?? [],
+                'user_site_level' => $this->getUserSiteLevel($member_id) ?? [],
             ];
 
             return $result;
